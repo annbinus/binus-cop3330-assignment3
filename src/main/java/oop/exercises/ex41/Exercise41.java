@@ -36,10 +36,29 @@ Use the program to sort data from a large data set (e.g. census data) and use a 
 
 */
 package oop.exercises.ex41;
-import java.io.File;
-import java.util.*;
+
+import java.util.ArrayList;
 
 public class Exercise41 {
 
+
+    public static void main(String[] args) {
+
+        //Create a class to read file and add names
+        readFile file = new readFile();
+        file.openFile();
+        file.addName();
+        ArrayList<String> list = file.getList();
+
+
+        //Create a class to sort the names
+        sortNames sort = new sortNames();
+        sort.getList(list);
+        ArrayList<String> newSortedList = sort.sortList();
+
+        //print list table
+        sort.printList(newSortedList);
+
+    }
 
 }

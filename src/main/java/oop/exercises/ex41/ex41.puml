@@ -1,0 +1,23 @@
+@startuml
+
+class readFile{
+- BufferedReader reader
+- ArrayList<String> list
++ openFile()
++ getName()
++ addName()
++ getList()
+}
+class sortNames{
+- ArrayList<String> List
++ getList(ArrayList<String>)
++ ArrayList<String> sortList()
++ printList(ArrayList<String>)
+}
+
+class Exercise41{
+}
+Exercise41 --|> readFile
+Exercise41 --|> sortNames
+
+@enduml
