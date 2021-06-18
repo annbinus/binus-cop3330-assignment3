@@ -24,7 +24,7 @@ public class readFile {
     }
 
     //create a function to get name from each line
-    public String getName() {
+    public String getName()  {
         String name = "";
 
         try {
@@ -37,16 +37,18 @@ public class readFile {
     }
 
     //create a function to add name
-    public void addName(){
+    public void addName() throws IOException {
 
         String name;
         while((name = getName()) != null){
             list.add(name);
         }
+        reader.close();
     }
 
     //create a function to return list of names
     public ArrayList<String> getList(){
         return list;
     }
+
 }

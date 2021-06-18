@@ -37,12 +37,14 @@ Use the program to sort data from a large data set (e.g. census data) and use a 
 */
 package oop.exercises.ex41;
 
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Exercise41 {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         //Create a class to read file and add names
         readFile file = new readFile();

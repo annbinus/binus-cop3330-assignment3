@@ -4,11 +4,12 @@ Copyright 2021 Ann Binus
 */
 package oop.exercises.ex41;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.io.*;
+import java.util.*;
 
 public class sortNames {
 
+    BufferedWriter writer;
     private ArrayList<String> List = new ArrayList<String>();
 
     //create a function to get list
@@ -23,13 +24,23 @@ public class sortNames {
     }
 
     //create a function to print list
-    public void printList(ArrayList<String> newList){
-        String result = "Total of " + newList.size() + " names\n" + "-----------------\n";
+    public void printList(ArrayList<String> newList) throws IOException {
 
-        for (String s : newList) {
-            result += s + "\n";
+        //open the output file to print
+        try {
+            writer = new BufferedWriter(new FileWriter("exercise41_output.txt"));
+        } catch (IOException e) {
+            System.out.print("Error opening file!");
         }
-        System.out.print(result);
+
+        writer.write("Total of " + newList.size() + " names\n" + "-----------------\n");
+
+        //loop through the list and add name in a table format
+        for (String s : newList) {
+            writer.write(s + "\n");
+        }
+        writer.close();
+
     }
 
 }
