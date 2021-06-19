@@ -11,7 +11,13 @@ public class GenerateFiles {
     //function to create a new file and directory
     public void makeFile(String path){
         File file = new File(path);
-        file.mkdir();
+        boolean bool = file.mkdir();
+        if(bool){
+            System.out.print("Created");
+        }
+        else{
+            System.out.print("not created");
+        }
     }
 
     //create website

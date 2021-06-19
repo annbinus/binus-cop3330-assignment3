@@ -37,6 +37,7 @@ public class Exercise43 {
         //prompt user about the site
         promptUser prompt = new promptUser();
         prompt.authorSiteName();
+
         prompt.folderJS();
         prompt.folderCSS();
 

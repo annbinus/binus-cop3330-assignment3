@@ -21,14 +21,14 @@ public class promptUser {
     public boolean folderJS(){
         System.out.print("Do you want a folder for JavaScript? ");
         String answer = scan.nextLine();
-        return answer.equals("y") || answer.equals("Y");
+        return (answer.equals("y") || answer.equals("Y"));
     }
 
     //ask if they want folder for CSS
     public boolean folderCSS(){
         System.out.print("Do you want a folder for CSS? ");
         String answer = scan.nextLine();
-        return answer.equals("y") || answer.equals("Y");
+        return (answer.equals("y") || answer.equals("Y"));
     }
 
     public String getSiteName(){
