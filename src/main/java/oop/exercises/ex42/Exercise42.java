@@ -47,22 +47,23 @@ public class Exercise42 {
 
         readFile file = new readFile();
 
+        //open file
         file.openFile();
+
         //read and add each data to a list
         file.addLine();
+
         //get list
         ArrayList<String> list = file.getList();
 
 
-        //print data on output file
-        printOutput print = new printOutput();
 
+        printOutput print = new printOutput();
+        //print data
         print.printList(list);
 
         //close input file
         file.closeFile();
-
-
 
     }
 }
