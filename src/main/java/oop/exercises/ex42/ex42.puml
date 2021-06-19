@@ -1,0 +1,28 @@
+@startuml
+
+class readFile{
+- BufferedReader
+- ArrayList<String> list
++ openFile()
++ getLine()
++ addLine()
++ closeInput()
++ getList()
+}
+
+class printOutput{
+- BufferedWriter
++ openOutput()
++ splitData()
++ printList()
++ closeOutput()
+}
+
+class Exercise42{
+- ArrayList<String> list
+}
+
+Exercise42 --|> readFile
+Exercise42 --|> printOutput
+
+@enduml

@@ -39,5 +39,29 @@ Rework your program to use a CSV parsing library and compare the results.
  */
 package oop.exercises.ex42;
 
+
+import java.util.ArrayList;
+
 public class Exercise42 {
+    public static void main(String[] args) {
+
+        //read file
+        readFile file = new readFile();
+        file.openFile();
+
+        //Create a list and add each data to list
+        file.addLine();
+        ArrayList<String> list = file.getList();
+
+        //print data on output file
+        printOutput print = new printOutput();
+        print.openOutput();
+        print.printList(list);
+
+        //close both file
+        file.closeFile();
+        print.closeFile();
+
+
+    }
 }

@@ -53,7 +53,7 @@ public class Exercise41 {
         ArrayList<String> list = file.getList();
 
 
-        //Create a class to sort the names
+        //Create a class to print the names
         sortNames sort = new sortNames();
         sort.getList(list);
         ArrayList<String> newSortedList = sort.sortList();
