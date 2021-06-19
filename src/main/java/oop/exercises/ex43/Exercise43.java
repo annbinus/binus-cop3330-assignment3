@@ -33,4 +33,19 @@ Implement this as a web application that provides the specified site as a zip fi
 package oop.exercises.ex43;
 
 public class Exercise43 {
+    public static void main(String[] args) {
+        //prompt user about the site
+        promptUser prompt = new promptUser();
+        prompt.authorSiteName();
+        prompt.folderJS();
+        prompt.folderCSS();
+
+        //create folders
+        GenerateFiles folder = new GenerateFiles();
+        folder.genWebsite();
+        folder.indexFile();
+        folder.JSFile();
+        folder.CSSFile();
+
+    }
 }
