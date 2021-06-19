@@ -37,16 +37,18 @@ public class Exercise43 {
         //prompt user about the site
         promptUser prompt = new promptUser();
         prompt.authorSiteName();
-
-        prompt.folderJS();
-        prompt.folderCSS();
+        boolean js= prompt.folderJS();
+        boolean css = prompt.folderCSS();
 
         //create folders
         GenerateFiles folder = new GenerateFiles();
-        folder.genWebsite();
-        folder.indexFile();
-        folder.JSFile();
-        folder.CSSFile();
+        folder.genWebsite(prompt.getSiteName());
+        folder.indexFile(prompt.getSiteName(), prompt.getAuthor());
+
+        folder.JSFile(prompt.getSiteName(), js);
+        folder.CSSFile(prompt.getSiteName(), css);
+
+
 
     }
 }

@@ -1,51 +1,57 @@
 package oop.exercises.ex43;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class GenerateFiles {
 
-    private promptUser user = new promptUser();
-    String path = new File("/src/main/java/oop/exercises/ex43/").getAbsolutePath();
+     promptUser user = new promptUser();
+    String path = new File("src/main/java/oop/exercises/ex43/").getAbsolutePath();
 
 
     //function to create a new file and directory
     public void makeFile(String path){
-        File file = new File(path);
-        boolean bool = file.mkdir();
-        if(bool){
-            System.out.print("Created");
-        }
-        else{
-            System.out.print("not created");
-        }
+        try {
+
+            Path p = Paths.get(path);
+
+            //java.nio.file.Files;
+            Files.createDirectories(p);
+
+        } catch (IOException e) {
+            System.err.println("Failed to create directory!" + e.getMessage());
+        };
     }
 
     //create website
-    public void genWebsite(){
-        makeFile(path + "/" + user.getSiteName());
-        System.out.print("Created ./" + user.getSiteName() + "/css/");
+    public void genWebsite(String name){
+        makeFile(path + "/" + name);
+        System.out.print("Created ./" + name + "\n");
     }
 
     //generate a JS file if needed
-    public void JSFile(){
-        if(user.folderJS()){
-            makeFile(path + user.getSiteName()+"/js");
-            System.out.print("Created ./" + user.getSiteName() + "/js/");
+    public void JSFile(String name, boolean js){
+        if(js){
+            makeFile(path + name +"/js");
+            System.out.print("Created ./" + name + "/js/\n");
         }
     }
 
     //generate a CSS file if needed
-    public void CSSFile(){
-        if(user.folderCSS()){
-            makeFile(path + user.getSiteName()+"/css");
-            System.out.print("Created ./" + user.getSiteName() + "/css/");
+    public void CSSFile(String name, boolean css){
+        if(css){
+            makeFile(path + name+"/css");
+            System.out.print("Created ./" + name + "/css/\n");
         }
     }
 
     //Generate an index file
-    public void indexFile(){
+    public void indexFile(String name, String author){
         GenerateHTML index = new GenerateHTML();
-        index.writeHTML(path +"/" + user.getSiteName() + "/index.html", user.getSiteName(), user.getAuthor());
-        System.out.println("Created ./" + user.getSiteName());
+        index.writeHTML(path +"/" + name + "/index.html", name, author);
+        System.out.print("Created ./" + name + "/index.html\n");
     }
 }

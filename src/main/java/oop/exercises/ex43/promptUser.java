@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class promptUser {
 
     private Scanner scan = new Scanner(System.in);
-    private String siteName;
-    private String author;
+    public String siteName;
+    public String author;
 
     //ask author for site name and their name
     public void authorSiteName(){
