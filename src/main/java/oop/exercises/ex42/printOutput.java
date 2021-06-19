@@ -4,24 +4,10 @@ Copyright 2021 Ann Binus
  */
 package oop.exercises.ex42;
 
-import java.io.*;
 import java.util.ArrayList;
 
 public class printOutput {
 
-    private BufferedWriter writer;
-
-
-    //open output file
-    public void openOutput() {
-
-        try {
-            writer = new BufferedWriter(new FileWriter("exercise42_output.txt"));
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     //split the data
     public String[] splitData(String data){
@@ -32,27 +18,15 @@ public class printOutput {
     //print on output file
     public void printList(ArrayList<String> list){
 
-                try {
-                    writer.write("Last      First     Salary\n-----------------------\n");
+        System.out.print("Last      First     Salary\n--------------------------\n");
 
-                    for (String id : list) {
-                        for (String a : splitData(id)) {
-                             writer.write(String.format("%-10s", a));
-                        }
-                        writer.write("\n");
-                    }
-                }catch (IOException e) {
-                    e.printStackTrace();
-                }
-        }
-
-
-    //close writer file
-    public void closeFile() {
-        try {
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        for (String id: list) {
+            String[] row = splitData(id);
+            for (String a: row) {
+                System.out.format("%-10s", a);
+            }
+            System.out.print("\n");
         }
     }
+
 }

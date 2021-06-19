@@ -41,14 +41,16 @@ public class readFile {
         public void addLine() {
 
             String name;
+
             while ((name = getLine()) != null) {
                 list.add(name);
             }
+
         }
             //close reader file
             public void closeFile() {
                 try {
-                    openFile().close();
+                    reader.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

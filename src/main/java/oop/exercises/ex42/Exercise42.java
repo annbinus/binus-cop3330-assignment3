@@ -45,22 +45,23 @@ import java.util.ArrayList;
 public class Exercise42 {
     public static void main(String[] args) {
 
-        //read file
         readFile file = new readFile();
-        file.openFile();
 
-        //Create a list and add each data to list
+        file.openFile();
+        //read and add each data to a list
         file.addLine();
+        //get list
         ArrayList<String> list = file.getList();
+
 
         //print data on output file
         printOutput print = new printOutput();
-        print.openOutput();
+
         print.printList(list);
 
-        //close both file
+        //close input file
         file.closeFile();
-        print.closeFile();
+
 
 
     }

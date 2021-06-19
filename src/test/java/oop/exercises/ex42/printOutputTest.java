@@ -6,8 +6,6 @@ package oop.exercises.ex42;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class printOutputTest {
@@ -16,15 +14,8 @@ class printOutputTest {
     void splitData_returns_correct_answer() {
 
         printOutput print = new printOutput();
+        String[] row = print.splitData("the,car,hit,the,bus");
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("exercise42_input.txt"));
-            String []row = print.splitData(br.readLine());
-            assertEquals("Ling", row[0]);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
+        assertEquals("the", row[0]);
     }
 }
