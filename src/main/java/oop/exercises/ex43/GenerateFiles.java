@@ -1,3 +1,7 @@
+/*
+UCF COP3330 Summer 2021 Assignment 3 Solution
+Copyright 2021 Ann Binus
+ */
 package oop.exercises.ex43;
 
 import java.io.File;
@@ -9,7 +13,7 @@ import java.nio.file.Paths;
 public class GenerateFiles {
 
      promptUser user = new promptUser();
-    String path = new File("src/main/java/oop/exercises/ex43/").getAbsolutePath();
+    String path = new File("").getAbsolutePath();
 
 
     //function to create a new file and directory
@@ -35,7 +39,7 @@ public class GenerateFiles {
     //generate a JS file if needed
     public void JSFile(String name, boolean js){
         if(js){
-            makeFile(path + name +"/js");
+            makeFile(path+ "/" + name +"/js");
             System.out.print("Created ./" + name + "/js/\n");
         }
     }
@@ -43,7 +47,7 @@ public class GenerateFiles {
     //generate a CSS file if needed
     public void CSSFile(String name, boolean css){
         if(css){
-            makeFile(path + name+"/css");
+            makeFile(path + "/"+ name+"/css");
             System.out.print("Created ./" + name + "/css/\n");
         }
     }

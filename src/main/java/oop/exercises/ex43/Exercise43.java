@@ -44,7 +44,6 @@ public class Exercise43 {
         GenerateFiles folder = new GenerateFiles();
         folder.genWebsite(prompt.getSiteName());
         folder.indexFile(prompt.getSiteName(), prompt.getAuthor());
-
         folder.JSFile(prompt.getSiteName(), js);
         folder.CSSFile(prompt.getSiteName(), css);
 
