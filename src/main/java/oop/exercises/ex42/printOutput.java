@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class printOutput {
 
-
     //split the data
     public String[] splitData(String data){
         String[] row = data.split(",");

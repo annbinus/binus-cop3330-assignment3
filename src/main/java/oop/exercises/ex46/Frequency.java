@@ -14,7 +14,7 @@ public class Frequency {
 
     public String getInput(){
         String text = "";
-        File file = new File("exercise46_input.txt");
+        File file = new File("input/exercise46_input.txt");
 
         try {
             text = Files.readString(file.toPath());

@@ -16,7 +16,13 @@ class readFileTest {
     void getLine_returns_correct_answer() {
         readFile read = new readFile();
 
-        assertEquals("Ling,Mai,55900", read.getLine());
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader("exercise42_input.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        assertEquals("Ling,Mai,55900", read.getLine(reader));
 
         }
 

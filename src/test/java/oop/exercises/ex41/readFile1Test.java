@@ -10,11 +10,11 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class readFileTest {
+class readFile1Test {
 
     @Test
     void getList_returns_correct_name() throws IOException {
-        readFile read = new readFile();
+        readFile1 read = new readFile1();
         read.openFile();
         read.addName();
         assertEquals("Ling, Mai", read.getList().get(0));
@@ -22,7 +22,7 @@ class readFileTest {
 
     @Test
     void getName_returns_true() throws IOException {
-        readFile read = new readFile();
+        readFile1 read = new readFile1();
         read.openFile();
         assertEquals("Ling, Mai", read.getName());
     }

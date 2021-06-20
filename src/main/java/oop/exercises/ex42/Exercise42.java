@@ -40,6 +40,7 @@ Rework your program to use a CSV parsing library and compare the results.
 package oop.exercises.ex42;
 
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 
 public class Exercise42 {
@@ -48,10 +49,10 @@ public class Exercise42 {
         readFile file = new readFile();
 
         //open file
-        file.openFile();
+        BufferedReader reader = file.openFile();
 
         //read and add each data to a list
-        file.addLine();
+        file.addLine(reader);
 
         //get list
         ArrayList<String> list = file.getList();

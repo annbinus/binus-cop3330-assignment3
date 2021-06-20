@@ -13,7 +13,7 @@ public class replaceWord {
 
     public String getFile(){
         String text = "";
-        File file = new File("exercise45_input.txt");
+        File file = new File("input/exercise45_input.txt");
 
         try {
             //Convert file text to string

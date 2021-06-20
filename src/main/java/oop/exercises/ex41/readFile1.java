@@ -8,7 +8,7 @@ package oop.exercises.ex41;
 import java.io.*;
 import java.util.ArrayList;
 
-public class readFile {
+public class readFile1 {
 
     private BufferedReader reader;
     private ArrayList<String> list = new ArrayList<String>();
@@ -16,7 +16,7 @@ public class readFile {
     //create a function to open file
     public void openFile(){
         try {
-            reader = new BufferedReader(new FileReader("exercise41_input.txt"));
+            reader = new BufferedReader(new FileReader("input/exercise41_input.txt"));
         } catch (FileNotFoundException e) {
             System.out.print("Error when opening file!");
         }

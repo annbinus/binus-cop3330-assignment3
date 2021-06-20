@@ -47,7 +47,7 @@ public class Exercise41 {
     public static void main(String[] args) throws IOException {
 
         //Create a class to read file and add names
-        readFile file = new readFile();
+        readFile1 file = new readFile1();
         file.openFile();
         file.addName();
         ArrayList<String> list = file.getList();

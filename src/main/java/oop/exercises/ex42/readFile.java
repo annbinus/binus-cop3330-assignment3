@@ -25,11 +25,11 @@ public class readFile {
         }
 
         //create a function to get data from each line
-        public String getLine()  {
+        public String getLine(BufferedReader reader)  {
             String name = "";
 
             try {
-                name = openFile().readLine();
+                name = reader.readLine();
             } catch (IOException e) {
                 System.out.print("Error when opening file!");
             }
@@ -38,11 +38,11 @@ public class readFile {
         }
 
         //create a function to add data
-        public void addLine() {
+        public void addLine(BufferedReader reader) {
 
             String name;
 
-            while ((name = getLine()) != null) {
+            while ((name = getLine(reader)) != null) {
                 list.add(name);
             }
 
