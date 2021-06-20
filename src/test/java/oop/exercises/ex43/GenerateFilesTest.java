@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class GenerateFilesTest {
 
     @Test
-    void genWebsite() {
+    void genWebsite_returns_right_value() {
         GenerateFiles check = new GenerateFiles();
 
         assertEquals("Created ./awesome\n", check.genWebsite("awesome"));
     }
 
     @Test
-    void JSFile() {
+    void JSFile_returns_right_value() {
 
         GenerateFiles check = new GenerateFiles();
 
@@ -26,14 +26,14 @@ class GenerateFilesTest {
     }
 
     @Test
-    void CSSFile() {
+    void CSSFile_returns_right_value() {
         GenerateFiles check = new GenerateFiles();
 
         assertEquals("Created ./awesome/css/\n", check.CSSFile("awesome", true));
     }
 
     @Test
-    void indexFile() {
+    void indexFile_returns_right_value() {
         GenerateFiles check = new GenerateFiles();
 
         assertEquals("Created ./awesome/index.html\n", check.indexFile("awesome", ""));
