@@ -1,0 +1,32 @@
+@startuml
+
+class GenerateFile{
+- String path
++ makeFile()
++ genWebsite()
++ JSFile()
++ CSSFile()
++ indexFile()
+}
+
+class GenerateHTML{
++ writeHTML()
+}
+
+class promptUser{
++ siteName
++ author
++ authorSiteName()
++ folderJS()
++ folderCSS()
++ getSiteName()
++ getAuthor()
+}
+
+class Exercise43{
+}
+Exercise43 --|> promptUser
+Exercise43 --|> GenerateFile
+Exercise43 --|> GenerateHTML
+
+@enduml

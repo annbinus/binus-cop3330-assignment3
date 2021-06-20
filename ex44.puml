@@ -1,0 +1,22 @@
+@startuml
+class deserializeJSON{
++ getData()
+}
+
+class Product{
++ String name
++ String price;
++ String quantity
++ Product()
++ getName()
++ setName()
++ data()
+}
+
+class Exercise44{
+}
+
+
+Exercise44--|>deserializeJSON
+deserializeJSON --|> Product
+@enduml

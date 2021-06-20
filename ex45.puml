@@ -1,0 +1,19 @@
+@startuml
+class fileOutput{
++writeOut()
++FileName()
+}
+
+class replaceWord{
++getFile()
++replace()
+}
+
+class Exercise45{
+}
+
+Exercise45--|>replaceWord
+Exercise45--|>fileOutput
+
+
+@enduml

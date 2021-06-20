@@ -12,8 +12,7 @@ import java.nio.file.Paths;
 
 public class GenerateFiles {
 
-     promptUser user = new promptUser();
-    String path = new File("").getAbsolutePath();
+    private String path = new File("").getAbsolutePath();
 
 
     //function to create a new file and directory

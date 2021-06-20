@@ -1,0 +1,26 @@
+@startuml
+class Frequency{
++getInput()
++addWord()
+}
+
+class printOutput{
++histogram()
+}
+
+class Word{
++word
++wordCount
++Word()
+}
+
+class Exercise46{
+
+}
+
+Exercise46--|>Frequency
+Frequency--|>Word
+Exercise46--|>histogram
+Exercise46--|>printOutput
+
+@enduml
