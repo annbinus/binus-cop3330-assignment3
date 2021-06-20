@@ -33,4 +33,17 @@ Modify the program so it can handle every file a folder of files instead of a si
 package oop.exercises.ex45;
 
 public class Exercise45 {
+    public static void main(String[] args){
+        replaceWord word = new replaceWord();
+
+        //open and read input file
+        String text = word.getFile();
+
+        //Modify the input file with the word to replace
+        text = word.replace(text);
+
+        //Create a new file and write the modified file
+        fileOutput writer = new fileOutput();
+        writer.writeOut(text);
+    }
 }

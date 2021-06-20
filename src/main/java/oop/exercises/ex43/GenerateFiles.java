@@ -31,31 +31,35 @@ public class GenerateFiles {
     }
 
     //create website
-    public void genWebsite(String name){
+    public String genWebsite(String name){
         makeFile(path + "/" + name);
-        System.out.print("Created ./" + name + "\n");
+        return ("Created ./" + name + "\n");
     }
 
     //generate a JS file if needed
-    public void JSFile(String name, boolean js){
+    public String JSFile(String name, boolean js){
+       String result = "";
         if(js){
             makeFile(path+ "/" + name +"/js");
-            System.out.print("Created ./" + name + "/js/\n");
+            result = "Created ./" + name + "/js/\n";
         }
+        return result;
     }
 
     //generate a CSS file if needed
-    public void CSSFile(String name, boolean css){
+    public String CSSFile(String name, boolean css){
+        String result = "";
         if(css){
             makeFile(path + "/"+ name+"/css");
-            System.out.print("Created ./" + name + "/css/\n");
+            result = "Created ./" + name + "/css/\n";
         }
+        return result;
     }
 
     //Generate an index file
-    public void indexFile(String name, String author){
+    public String indexFile(String name, String author){
         GenerateHTML index = new GenerateHTML();
         index.writeHTML(path +"/" + name + "/index.html", name, author);
-        System.out.print("Created ./" + name + "/index.html\n");
+        return ("Created ./" + name + "/index.html\n");
     }
 }

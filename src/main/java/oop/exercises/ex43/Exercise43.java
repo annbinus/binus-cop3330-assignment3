@@ -42,10 +42,10 @@ public class Exercise43 {
 
         //create folders
         GenerateFiles folder = new GenerateFiles();
-        folder.genWebsite(prompt.getSiteName());
-        folder.indexFile(prompt.getSiteName(), prompt.getAuthor());
-        folder.JSFile(prompt.getSiteName(), js);
-        folder.CSSFile(prompt.getSiteName(), css);
+        System.out.print(folder.genWebsite(prompt.getSiteName()));
+        System.out.print(folder.indexFile(prompt.getSiteName(), prompt.getAuthor()));
+        System.out.println(folder.JSFile(prompt.getSiteName(), js));
+        System.out.println(folder.CSSFile(prompt.getSiteName(), css));
 
 
 
