@@ -4,19 +4,20 @@ Copyright 2021 Ann Binus
  */
 package oop.exercises.ex45;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 
 public class replaceWord {
 
-    private static Path path = Paths.get("exercise45_input.txt");
 
     public String getFile(){
         String text = "";
+        File file = new File("exercise45_input.txt");
 
         try {
             //Convert file text to string
-            text = Files.readString(path);
+            text = Files.readString(file.toPath());
         } catch (IOException e) {
             e.printStackTrace();
         }
