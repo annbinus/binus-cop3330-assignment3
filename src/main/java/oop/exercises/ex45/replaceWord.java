@@ -11,6 +11,7 @@ import java.nio.file.*;
 public class replaceWord {
 
 
+    //open file and convert text to string
     public String getFile(){
         String text = "";
         File file = new File("input/exercise45_input.txt");

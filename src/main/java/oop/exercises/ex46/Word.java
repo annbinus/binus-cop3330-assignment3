@@ -8,6 +8,7 @@ public class Word {
     String word;
     int wordCount;
 
+    //constructor for Word
     public Word(String word, int wordCount) {
         this.word = word;
         this.wordCount = wordCount;

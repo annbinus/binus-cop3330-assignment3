@@ -9,14 +9,19 @@ import java.util.Comparator;
 
 public class printOutput {
 
+    //create histogram for the words
     public String histogram(ArrayList<Word> list){
         StringBuilder result = new StringBuilder();
 
+        //make an ordered list
         Comparator<Word> comparator = (obj1, obj2) -> obj2.wordCount -  obj1.wordCount;
         list.sort(comparator);
 
+        //print histogram
         for(Word w : list){
             StringBuilder builder = new StringBuilder(String.format("%-10s", w.word + ":"));
+
+            //print "*" for every count
             while(w.wordCount > 0){
                 builder.append("*");
                 w.wordCount--;

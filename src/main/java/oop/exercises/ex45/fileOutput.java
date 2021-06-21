@@ -28,6 +28,7 @@ public class fileOutput {
         }
     }
 
+    //ask for output file name
     public String FileName(){
         System.out.print("Please enter the name of the output file. ");
         return scan.nextLine();
