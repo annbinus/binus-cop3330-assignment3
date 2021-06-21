@@ -14,7 +14,7 @@ public class replaceWord {
     //open file and convert text to string
     public String getFile(){
         String text = "";
-        File file = new File("input/exercise45_input.txt");
+        File file = new File("src/main/resources/input/exercise45_input.txt");
 
         try {
             //Convert file text to string

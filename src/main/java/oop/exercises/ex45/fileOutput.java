@@ -17,7 +17,7 @@ public class fileOutput {
 
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter(FileName()+".txt"));
+            writer = new BufferedWriter(new FileWriter("src/main/resources/output/"+FileName()+".txt"));
 
             //write the modified version of the text
             writer.write(fileText);

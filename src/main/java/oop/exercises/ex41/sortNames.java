@@ -28,7 +28,7 @@ public class sortNames {
 
         //open the output file to print
         try {
-            writer = new BufferedWriter(new FileWriter("exercise42_output.txt"));
+            writer = new BufferedWriter(new FileWriter("src/main/resources/output/exercise41_output.txt"));
         } catch (IOException e) {
             System.out.print("Error opening file!");
         }

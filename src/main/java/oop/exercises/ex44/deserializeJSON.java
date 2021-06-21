@@ -14,7 +14,7 @@ public class deserializeJSON {
     //create a function to return list of products
     public static List<Product> getData() {
 
-        File file = new File("input/exercise44_input.json");
+        File file = new File("src/main/resources/input/exercise44_input.json");
 
         //create List of products
         List<Product> products = null;

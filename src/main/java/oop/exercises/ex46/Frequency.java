@@ -15,7 +15,7 @@ public class Frequency {
     //open input file and convert text to string
     public String getInput(){
         String text = "";
-        File file = new File("input/exercise46_input.txt");
+        File file = new File("src/main/resources/input/exercise46_input.txt");
 
         try {
             text = Files.readString(file.toPath());

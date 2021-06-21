@@ -16,7 +16,7 @@ public class readFile1 {
     //create a function to open file
     public void openFile(){
         try {
-            reader = new BufferedReader(new FileReader("input/exercise41_input.txt"));
+            reader = new BufferedReader(new FileReader("src/main/resources/input/exercise41_input.txt"));
         } catch (FileNotFoundException e) {
             System.out.print("Error when opening file!");
         }

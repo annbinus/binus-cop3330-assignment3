@@ -17,7 +17,7 @@ public class readFile {
         public BufferedReader openFile(){
 
             try {
-               reader = new BufferedReader(new FileReader("exercise42_input.txt"));
+               reader = new BufferedReader(new FileReader("src/main/resources/input/exercise42_input.txt"));
             } catch (FileNotFoundException e) {
                 System.out.print("Error when opening file!");
             }
